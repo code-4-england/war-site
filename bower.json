@@ -1,0 +1,22 @@
+{
+  "name": "war",
+  "description": "Angular app displaying info on English wars",
+  "main": "index.js",
+  "authors": [
+    "Martin Green"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "angular": "~1.4.8"
+  }
+}
