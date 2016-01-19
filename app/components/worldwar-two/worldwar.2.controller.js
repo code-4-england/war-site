@@ -13,6 +13,15 @@
     $scope.dave = { name:'Dave', hair: 'ginger', sex: 'male' };
     $scope.hannah = { name: 'Hannah', hair: 'blonde', sex: 'female' };
     $scope.color = 'green';
+    $scope.greeting = 'hello';
+    $scope.price = 156.2254;
+
+    $scope.$watch("firstName", function(newValue, oldValue) {
+      console.log('change occured');
+      if($scope.firstName.length > 0) {
+        $scope.greeting = "Greetings " + $scope.firstName;
+      }
+    });
   };
 
 })();

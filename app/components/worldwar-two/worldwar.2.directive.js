@@ -21,7 +21,7 @@
         scope: {
           user: '=user'
         },
-        template: "<h2 ng-switch='user.sex'><span ng-switch-when='male'>His</span><span ng-switch-when='female'>Her</span> name is {{ user.name }}</h2>"
+        template: "<h2 ng-switch='user.sex'><span ng-switch-when='male'>His</span><span ng-switch-when='female'>Her</span> name is {{ user.name | uppercase }}</h2>"
       }
     })
 
@@ -60,11 +60,11 @@
     .directive('jelloWorlds', function() {
       return {
         scope: {
-          color: '@colorAttr'
+          color: '='
         },
         restrict: 'AE',
         replace: true,
-        template: '<p style="background-color:{{color}}">jello worlds',
+        template: '<p style="background-color:{{color}}">jello world',
         link: function(scope, elem, attrs) {
           elem.bind('click', function() {
             elem.css('backgroung-color', 'white');

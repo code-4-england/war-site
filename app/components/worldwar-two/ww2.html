@@ -1,13 +1,19 @@
 <div>
-
+<p>{{greeting}}</p>
+    <p>Price: {{ price | currency: '£' }}</p>
+    <p>Price: {{ price | number:2 }}</p>
     <ww2a></ww2a>
     <ww2c user="{{ firstName }}"></ww2c>
     <ww2b user="dave"></ww2b>
     <ww2b user="hannah"></ww2b>
 
    <label>Colour for hello world </label><input type="text" ng-model="color" placeholder="Enter a color" />
+
+
     <hello-world color-attr="{{color}}"></hello-world>
-    <jello-worlds></jello-worlds>
+
+
+    <jello-worlds color="color"></jello-worlds>
 
     <pre>$location.path() = {{$location.path()}}</pre>
     <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
